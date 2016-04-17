@@ -1,5 +1,9 @@
 <h1>Edit new item</h1>
-<form action="/items" method="POST">
-<input type="text" name="title"/>
-<input type="submit"/>
-</form>
+
+  <%= form_for @item do |f| %>
+
+  <%=render partial: "form", locals: {f: f}%>
+
+	<p><%= f.submit %></p>
+
+  <% end %>

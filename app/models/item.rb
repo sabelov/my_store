@@ -11,6 +11,8 @@ class Item < ActiveRecord::Base
     after_update     { puts "updated" }
     after_destroy    { puts "destroyed" } # item.destroy
     
-    
+    has_many :positions
+    has_many :carts, through: :positions
+    has_many :comments, as: :commentable
     
 end

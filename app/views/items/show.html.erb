@@ -1,7 +1,8 @@
-<h1><%= @item.name%></h1>
-
+<h1><%= @item.name %></h1>
 <ul>
+	<li><%= @item.id %></li>
     <li><%= @item.price %>руб</li>
-    <li><%= @item.description %></li>
+    <li><%= urls_to_links(urls_to_images(@item.description)) %></li>
     <li>Вес:<%= @item.weight %></li>
+	<li>Ссылка: <%= item_path(@item) %></li>
 </ul>
